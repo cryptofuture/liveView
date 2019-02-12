@@ -1,7 +1,7 @@
 # liveView
 Cross-Platform Sony Camera Remote API LiveView
 
-## Minimal Python Application to display Camera Live Preview
+##### Minimal Python Application to display Camera Live Preview
 
 
 Export liveview path for ex.: `export CAM_LV="http://10.0.0.1:60152"` (Linux, macOS) or  
