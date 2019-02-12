@@ -4,6 +4,7 @@ import httplib
 import struct
 import binascii
 import pprint
+import os
 
 import pygame
 import time
@@ -14,9 +15,9 @@ pygame.init()
 w = 640
 h = 480
 size=(w,h)
-screen = pygame.display.set_mode(size) 
+screen = pygame.display.set_mode(size)
 
-conn = httplib.HTTPConnection("172.24.254.148:60152")
+conn = httplib.HTTPConnection((os.environ['CAM_LV']).replace('http://', ''))
 conn.request("GET", "/liveview.JPG?%211234%21http%2dget%3a%2a%3aimage%2fjpeg%3a%2a%21%21%21%21%21")
 res = conn.getresponse()
 
